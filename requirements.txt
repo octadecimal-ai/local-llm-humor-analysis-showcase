@@ -1,10 +1,23 @@
+# Istniejące zależności
 torch>=2.0.0
 torchvision>=0.15.0
 transformers>=4.30.0
 pillow>=9.5.0
 requests>=2.31.0
-flask>=2.3.0
-flask-cors>=4.0.0
 deep-translator>=1.11.4
 ollama>=0.3.0
+
+# FastAPI i zależności
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+python-multipart>=0.0.6
+
+# Opcjonalnie (dla lepszej dokumentacji)
+python-jose[cryptography]>=3.3.0
+
+# Flask (zachowane dla kompatybilności, do usunięcia po migracji)
+flask>=2.3.0
+flask-cors>=4.0.0
 
