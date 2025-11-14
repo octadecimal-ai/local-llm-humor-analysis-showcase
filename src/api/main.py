@@ -87,6 +87,15 @@ if config.ENABLE_JOKE_ANALYSER:
     except Exception as e:
         logger.error(f"❌ Błąd włączania modułu Joke Analyser: {e}")
 
+# Nowy moduł: Humor Features Extractor (tylko features, bez scoring)
+if config.ENABLE_HUMOR_FEATURES:
+    try:
+        from humor_features.router import router as humor_features_router
+        app.include_router(humor_features_router, prefix="/humor-features", tags=["Humor Features"])
+        logger.info("✅ Moduł Humor Features Extractor włączony")
+    except Exception as e:
+        logger.error(f"❌ Błąd włączania modułu Humor Features: {e}")
+
 
 # Globalny handler błędów
 @app.exception_handler(Exception)
