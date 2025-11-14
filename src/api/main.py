@@ -81,7 +81,7 @@ if config.ENABLE_JOKER:
 
 if config.ENABLE_JOKE_ANALYSER:
     try:
-        from modules.joke_analyser.router import router as analyser_router
+        from api.routers.joke_analyser import router as analyser_router
         app.include_router(analyser_router, prefix="/joke-analyser", tags=["Joke Analyser"])
         logger.info("✅ Moduł Joke Analyser włączony")
     except Exception as e:
