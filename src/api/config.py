@@ -21,6 +21,7 @@ class ServiceConfig(BaseSettings):
     ENABLE_OLLAMA: bool = True
     ENABLE_JOKER: bool = False
     ENABLE_JOKE_ANALYSER: bool = False
+    ENABLE_HUMOR_FEATURES: bool = False  # Nowy: feature extraction bez scoring
     
     # Konfiguracja modułów
     # Image Description
